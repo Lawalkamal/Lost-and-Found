@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Signup</title>
-    <link rel="stylesheet" href="../css/loginandsignup.css" />
-    <link rel="stylesheet" href="../css/overall.css" />
+    <link rel="stylesheet" href="/css/loginandsignup.css" />
+    <link rel="stylesheet" href="/css/overall.css" />
   </head>
   <body>
     <div class="background">
@@ -35,8 +35,8 @@
     <header>
       <div class="container flex">
         <div class="logo flex">
-          <img src="../assets/images/image.png" alt="" />
-          <a href="../index.html">Findit</a>
+          <img src="/assets/images/image.png" alt="" />
+          <a href="/index.html">Findit</a>
         </div>
       </div>
     </header>
@@ -71,7 +71,7 @@
         <small class="error-msg" id="signup-error"></small>
         <button type="submit" id="signup-button">Sign Up</button>
         <button class="google-btn" id="google-signup">
-          <img src="../assets/images/google-color-svgrepo-com.svg" alt="" />Sign
+          <img src="/assets/images/google-color-svgrepo-com.svg" alt="" />Sign
           up with Google
         </button>
         <p>Already have an account? <a href="#" id="login-text">Login</a></p>
@@ -97,7 +97,7 @@
         <button type="submit" id="login-button">Login</button>
         <button class="google-btn" id="google-login">
           <img
-            src="../assets/images/google-color-svgrepo-com.svg"
+            src="/assets/images/google-color-svgrepo-com.svg"
             alt=""
           />Continue with Google
         </button>
@@ -134,7 +134,7 @@
         if (user) {
           // User is already logged in, redirect to home
           console.log('User already logged in:', user.email);
-          window.location.href = '../index.html';
+          window.location.href = '/index.html';
         }
       });
 
@@ -183,7 +183,7 @@
               }, { merge: true });
 
               // Redirect to home page
-              window.location.href = "../index.html";
+              window.location.href = "/index.html";
               
             } catch (error) {
               console.error("Google sign-in error:", error);
@@ -191,8 +191,8 @@
             } finally {
               btn.disabled = false;
               btn.innerHTML = btn.id === 'google-signup' 
-                ? '<img src="../assets/images/google-color-svgrepo-com.svg" alt="" />Sign up with Google'
-                : '<img src="../assets/images/google-color-svgrepo-com.svg" alt="" />Continue with Google';
+                ? '<img src="/assets/images/google-color-svgrepo-com.svg" alt="" />Sign up with Google'
+                : '<img src="/assets/images/google-color-svgrepo-com.svg" alt="" />Continue with Google';
             }
           });
         }
@@ -256,7 +256,7 @@
           console.log("Signed up:", user.email);
           
           // Redirect to home page
-          window.location.href = "../index.html";
+          window.location.href = "/index.html";
           
         } catch (error) {
           console.error("Signup error:", error);
@@ -305,7 +305,7 @@
           console.log("Logged in:", user.email);
           
           // Redirect to home page
-          window.location.href = "../index.html";
+          window.location.href = "/index.html";
           
         } catch (error) {
           console.error("Login error:", error);
