@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundy</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bg"></div>
+      <div class="container flex flex-end">
+        <div class="logo flex">
+          <img src="../assets/images/image.png" alt="" />
+          <a href="./index.html">Findit</a>
+        </div>
+        <nav class="del-mobile">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/browse.html">Lost and Found</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Auth buttons - shown when not logged in -->
+        <div class="auth-buttons del-mobile" id="auth-buttons">
+          <a href="../html/loginandsignup.html" class="register-btn"
+            >Register</a
+          >
+        </div>
+
+        <!-- Profile section - shown when logged in -->
+        <div class="profile-section" id="profile-section" style="display: none">
+          <div class="profile-dropdown">
+            <div class="profile-trigger" onclick="toggleProfileDropdown()">
+              <img
+                id="user-avatar"
+                src="../assets/images/profile-circle-svgrepo-com.svg"
+                alt="Profile"
+                width="40"
+                style="border-radius: 50%"
+              />
+              <span id="user-name">User</span>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+            <div class="profile-menu" id="profile-menu">
+              <a href="../html/profile.html" class="profile-menu-item">
+                <span>👤</span> My Profile
+              </a>
+              <!-- <a href="../html/my-items.html" class="profile-menu-item">
+                <span>📦</span> My Items
+              </a> -->
+              <div class="profile-menu-divider"></div>
+              <a href="#" onclick="logout()" class="profile-menu-item logout">
+                <span>🚪</span> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
+         <div class="hamburger show">
+                <span></span>
+                <span></span>
+                <span></span>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <section id="hero">
+        <div class="container flex">
+          <div class="content">
+            <h1 id="fade-text">
+              Lost Something? Let's help you <span class="find">find </span>it.
+            </h1>
+            <p>
+              Report lost or found items quickly and connect with <br />
+              others in your community to reunite them with their rightful
+              owners.
+            </p>
+            <div class="hero-btns">
+              <a href="#" onclick="checkAuthAndReport()">Report an Item</a>
+              <a href="../html/browse.html">Browse Lost Items</a>
+            </div>
+          </div>
+          <img
+            src="../assets/images/8551129-Photoroom.png"
+            alt=""
+            class="illustration"
+          />
+        </div>
+      </section>
+
+      <!-- How it works Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2>How It Works</h2>
+          <div class="steps">
+            <div class="step">
+              <img
+                src="../assets/images/report-svgrepo-com (1).svg"
+                alt="Report Icon"
+              />
+              <h3>Step 1: Report</h3>
+              <p>
+                Describe the lost or found item with details and post it in
+                seconds.
+              </p>
+            </div>
+            <div class="step">
+              <img
+                src="../assets/images/folder-search-svgrepo-com (2).svg"
+                alt="Review Icon"
+              />
+              <h3>Step 2: Review</h3>
+              <p>
+                Browse reports from your community and filter by location or
+                type.
+              </p>
+            </div>
+            <div class="step">
+              <img
+                src="../assets/images/handshake-svgrepo-com.svg"
+                alt="Reconnect Icon"
+              />
+              <h3>Step 3: Reconnect</h3>
+              <p>Match up with the finder or owner and reconnect safely.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-2">
+        <h1>Recent Lost and Found Items</h1>
+        <div class="container flex">
+          <div class="item">
+            <!-- <img
+              src="../assets/images/nathan-waters-j7q-Z9DV3zw-unsplash.jpg"
+              alt="Lost Item 1"
+            /> -->
+            <h2>Lost Wallet</h2>
+            <p>Last seen at the park on 10th March.</p>
+          </div>
+          <div class="item">
+            <!-- <img
+              src="../assets/images/raffaele-parente-acbttUbAz78-unsplash.jpg"
+              alt="Lost Item 2"
+            /> -->
+            <h2>Found Keys</h2>
+            <p>Found near the library on 12th March.</p>
+          </div>
+          <div class="item">
+            <!-- <img
+              src="../assets/images/robin-de-kesel-fxydz4_bsr4-unsplash.jpg"
+              alt="Lost Item 3"
+            /> -->
+            <h2>Lost Phone</h2>
+            <p>Last seen at the coffee shop on 15th March.</p>
+          </div>
+        </div>
+        <a href="../html/browse.html" class="view-all-btn">View all items</a>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <p>&copy; 2025 Findit. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="../assets/images/facebook-icon.svg" alt="Facebook" /></a>
+        <a href="#"><img src="../assets/images/twitter-icon.svg" alt="Twitter" /></a>
+        <a href="#"><img src="../assets/images/instagram-icon.svg" alt="Instagram" /></a>
+        <a href="#"><img src="../assets/images/linkedin-icon.svg" alt="LinkedIn" /></a>
+      </div>
+      <p>Contact us at <a href="mailto:support@findit.com">support@findit.com</a></p>
+      <p>Privacy Policy | Terms of Service</p>
+      <p>Made with ❤️ by the Findit Team</p>
+    </footer> -->
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+    <script>
+
+      const Hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.del-mobile');
+        Hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        console.log("clicked")
+      });
+      const firebaseConfig = {
+        apiKey: "AIzaSyDyRmoMB05AqOe7wy3SQvjX4AznHgLeD4I",
+        authDomain: "lostandfound-8e40a.firebaseapp.com",
+        projectId: "lostandfound-8e40a",
+        appId: "1:655253792806:web:a5254918977da0d0d01ee7",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      let currentUser = null;
+
+      // Authentication state observer
+      auth.onAuthStateChanged((user) => {
+        currentUser = user;
+        updateUIBasedOnAuth(user);
+      });
+
+      // Update UI based on authentication state
+      function updateUIBasedOnAuth(user) {
+        const authButtons = document.getElementById("auth-buttons");
+        const profileSection = document.getElementById("profile-section");
+        const userName = document.getElementById("user-name");
+        const userAvatar = document.getElementById("user-avatar");
+
+        if (user) {
+          // User is logged in
+          authButtons.style.display = "none";
+          profileSection.style.display = "block";
+
+          // Update user info
+          userName.textContent = user.displayName || user.email.split("@")[0];
+          if (user.photoURL) {
+            userAvatar.src = user.photoURL;
+          }
+        } else {
+          // User is not logged in
+          authButtons.style.display = "block";
+          profileSection.style.display = "none";
+        }
+      }
+
+      // Check authentication before allowing report
+      function checkAuthAndReport() {
+        if (currentUser) {
+          window.location.href = "../html/report.html";
+        } else {
+          // Show modal or redirect to login
+          if (
+            confirm(
+              "You need to log in to report an item. Would you like to log in now?"
+            )
+          ) {
+            window.location.href = "../html/loginandsignup.html";
+          }
+        }
+      }
+
+      // Toggle profile dropdown
+      function toggleProfileDropdown() {
+        const menu = document.getElementById("profile-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        const profileSection = document.querySelector(".profile-section");
+        const menu = document.getElementById("profile-menu");
+
+        if (!profileSection.contains(event.target)) {
+          menu.style.display = "none";
+        }
+      });
+
+      // Logout function
+      function logout() {
+        auth
+          .signOut()
+          .then(() => {
+            console.log("User signed out");
+            window.location.reload();
+          })
+          .catch((error) => {
+            console.error("Error signing out:", error);
+          });
+      }
+
+      // Add some basic styles for the profile dropdown
+      const styles = `
+        <style>
+          .profile-section {
+            position: relative ;
+             font-family: Winky Rough, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+          }
+
+          .profile-dropdown {
+            position: relative;
+          }
+
+          .profile-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+          }
+
+          .profile-trigger:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+
+          .profile-trigger span {
+            color: white;
+            font-size: 14px;
+          }
+
+          .dropdown-arrow {
+            font-size: 10px;
+            transition: transform 0.3s ease;
+          }
+
+          .profile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 180px;
+            z-index: 1000;
+            overflow: hidden;
+            margin-top: 8px;
+            
+          }
+
+          .profile-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.2s ease;
+          }
+
+          .profile-menu-item:hover {
+            background-color: #f5f5f5;
+          }
+
+          .profile-menu-item.logout {
+            color: #dc3545;
+          }
+
+          .profile-menu-item.logout:hover {
+            background-color: #fee;
+          }
+
+          .profile-menu-divider {
+            height: 1px;
+            background-color: #e9ecef;
+            margin: 4px 0;
+          }
+
+          .profile-menu-item span {
+            font-size: 16px;
+          }
+
+            @media (max-width: 775px){
+              .profile-dropdown{
+                display: none;
+              }
+        </style>
+      `;
+
+      document.head.insertAdjacentHTML("beforeend", styles);
+    </script>
+  </body>
+</html>
