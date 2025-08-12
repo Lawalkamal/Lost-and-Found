@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Report Item - Lost & Found</title>
-    <link rel="stylesheet" href="/css/report.css" />
+    <title>Report Item - FindIt</title>
+    <link rel="stylesheet" href="./report.css" />
   </head>
   <body>
     <div class="background">
@@ -63,7 +63,7 @@
 
     <div class="form-container" id="main-content" style="display: none;">
       <div class="header">
-        <a href="browse.html" class="back-link">
+        <a href="./browse.html" class="back-link">
           <span>←</span>
           Back to Browse Items
         </a>
@@ -235,12 +235,12 @@
 
       // Redirect functions
       function redirectToLogin() {
-        window.location.href = '/html/loginandsignup.html';
+        window.location.href = './loginandsignup.html';
       }
 
       function goBack() {
         window.history.back();
-        window.location.href = '/index.html';
+        window.location.href = './index.html';
       }
 
       // Initialize form
@@ -360,7 +360,7 @@
 
           // Redirect after delay
           setTimeout(() => {
-            window.location.href = "/browse.html";
+            window.location.href = "./browse.html";
           }, 2000);
         } catch (error) {
           console.error("Error submitting form:", error);

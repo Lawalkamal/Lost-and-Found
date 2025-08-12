@@ -3,31 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundy</title>
-    <link rel="stylesheet" href="css\styles.css" />
+    <title>Homepage - FindIt</title>
+    <link rel="stylesheet" href=".\styles.css" />
+    <style>
+      /* Footer */
+      .footer {
+        padding: 3rem 1rem 1rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        overflow: hidden;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo {
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .footer-description {
+        opacity: 0.8;
+        margin-bottom: 1.5rem;
+        max-width: 24rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link img {
+        width: 1em;
+        transition: color 0.2s;
+      }
+
+      .footer-title {
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: inherit;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: all 0.2s;
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--accent);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        color: white;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "Open Sans", sans-serif;
+        opacity: 0.8;
+      }
+
+      .contact-icon {
+        font-size: 1rem;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2rem;
+        text-align: center;
+        opacity: 0.6;
+      }
+    </style>
   </head>
   <body>
     <header>
       <div class="bg"></div>
-      <div class="container flex flex-end">
+      <div class="container flex ">
         <div class="logo flex">
-          <img src="/assets/images/image.png" alt="" />
+          <img src="./assets/images/image.png" alt="" />
           <a href="/index.html">Findit</a>
         </div>
         <nav class="del-mobile">
           <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/html/about.html">About</a></li>
-            <li><a href="/html/browse.html">Lost and Found</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+            <li><a href="./html/browse.html">Lost and Found</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        
+
         <!-- Auth buttons - shown when not logged in -->
         <div class="auth-buttons del-mobile" id="auth-buttons">
-          <a href="/html/loginandsignup.html" class="register-btn"
-            >Register</a
-          >
+          <a href="./loginandsignup.html" class="register-btn">Register</a>
         </div>
 
         <!-- Profile section - shown when logged in -->
@@ -36,7 +125,7 @@
             <div class="profile-trigger" onclick="toggleProfileDropdown()">
               <img
                 id="user-avatar"
-                src="/assets/images/profile-circle-svgrepo-com.svg"
+                src="./assets/images/profile-circle-svgrepo-com.svg"
                 alt="Profile"
                 width="40"
                 style="border-radius: 50%"
@@ -45,7 +134,7 @@
               <span class="dropdown-arrow">▼</span>
             </div>
             <div class="profile-menu" id="profile-menu">
-              <a href="/html/profile.html" class="profile-menu-item">
+              <a href="./profile.html" class="profile-menu-item">
                 <span>👤</span> My Profile
               </a>
               <!-- <a href="../html/my-items.html" class="profile-menu-item">
@@ -59,11 +148,11 @@
           </div>
         </div>
         <div class="overlay"></div>
-         <div class="hamburger show">
-                <span></span>
-                <span></span>
-                <span></span>
-          </div>
+        <div class="hamburger show">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -82,11 +171,11 @@
             </p>
             <div class="hero-btns">
               <a href="#" onclick="checkAuthAndReport()">Report an Item</a>
-              <a href="/html/browse.html">Browse Lost Items</a>
+              <a href="./browse.html">Browse Lost Items</a>
             </div>
           </div>
           <img
-            src="/assets/images/8551129-Photoroom.png"
+            src="./assets/images/8551129-Photoroom.png"
             alt=""
             class="illustration"
           />
@@ -100,7 +189,7 @@
           <div class="steps">
             <div class="step">
               <img
-                src="/assets/images/report-svgrepo-com (1).svg"
+                src="./assets/images/report-svgrepo-com (1).svg"
                 alt="Report Icon"
               />
               <h3>Step 1: Report</h3>
@@ -111,7 +200,7 @@
             </div>
             <div class="step">
               <img
-                src="/assets/images/folder-search-svgrepo-com (2).svg"
+                src="./assets/images/folder-search-svgrepo-com (2).svg"
                 alt="Review Icon"
               />
               <h3>Step 2: Review</h3>
@@ -122,7 +211,7 @@
             </div>
             <div class="step">
               <img
-                src="/assets/images/handshake-svgrepo-com.svg"
+                src="./assets/images/handshake-svgrepo-com.svg"
                 alt="Reconnect Icon"
               />
               <h3>Step 3: Reconnect</h3>
@@ -160,17 +249,87 @@
             <p>Last seen at the coffee shop on 15th March.</p>
           </div>
         </div>
-        <a href="/html/browse.html" class="view-all-btn">View all items</a>
+        <a href="./browse.html" class="view-all-btn">View all items</a>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Section -->
+          <div class="footer-brand">
+            <div class="footer-logo">FindIt</div>
+            <p class="footer-description">
+              
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><img src="images/facebook.png" alt=""
+              /></a>
+              <a href="#" class="social-link"
+                ><img src="images/instagram.png" alt=""
+              /></a>
+              <a href="#" class="social-link"
+                ><img src="images/twitter.png" alt=""
+              /></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#" onclick="showView('directory')">Find Artisans</a>
+              </li>
+              <li>
+                <a href="#" onclick="showView('register')">Join as Artisan</a>
+              </li>
+              <li><a href="#">How it Works</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img src="images/location.png" alt=""
+                /></span>
+                <span>Lagos, Nigeria</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img src="images/phone-call.png" alt=""
+                /></span>
+                <span>+234 800 NAIJAFIX</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img src="images/email.png" alt=""
+                /></span>
+                <span>hello@naijafix.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 FindIt. All rights reserved. Developed by Kamal.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- <footer>
       <p>&copy; 2025 Findit. All rights reserved.</p>
       <div class="social-icons">
-        <a href="#"><img src="/assets/images/facebook-icon.svg" alt="Facebook" /></a>
-        <a href="#"><img src="/assets/images/twitter-icon.svg" alt="Twitter" /></a>
-        <a href="#"><img src="/assets/images/instagram-icon.svg" alt="Instagram" /></a>
-        <a href="#"><img src="/assets/images/linkedin-icon.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="./assets/images/facebook-icon.svg" alt="Facebook" /></a>
+        <a href="#"><img src="./assets/images/twitter-icon.svg" alt="Twitter" /></a>
+        <a href="#"><img src="./assets/images/instagram-icon.svg" alt="Instagram" /></a>
+        <a href="#"><img src="./assets/images/linkedin-icon.svg" alt="LinkedIn" /></a>
       </div>
       <p>Contact us at <a href="mailto:support@findit.com">support@findit.com</a></p>
       <p>Privacy Policy | Terms of Service</p>
@@ -183,12 +342,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
     <script>
-
-      const Hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.del-mobile');
-        Hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        console.log("clicked")
+      const Hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".del-mobile");
+      Hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        console.log("clicked");
       });
       const firebaseConfig = {
         apiKey: "AIzaSyDyRmoMB05AqOe7wy3SQvjX4AznHgLeD4I",
@@ -236,7 +394,7 @@
       // Check authentication before allowing report
       function checkAuthAndReport() {
         if (currentUser) {
-          window.location.href = "/html/report.html";
+          window.location.href = "./report.html";
         } else {
           // Show modal or redirect to login
           if (
@@ -244,7 +402,7 @@
               "You need to log in to report an item. Would you like to log in now?"
             )
           ) {
-            window.location.href = "/html/loginandsignup.html";
+            window.location.href = "./loginandsignup.html";
           }
         }
       }
