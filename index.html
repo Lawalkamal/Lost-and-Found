@@ -100,24 +100,32 @@
   <body>
     <header>
       <div class="bg"></div>
-      <div class="container flex ">
+      <div class="container flex">
         <div class="logo flex">
           <img src="./assets/images/image.png" alt="" />
           <a href="/index.html">Findit</a>
         </div>
         <nav class="del-mobile">
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./html/about.html">About</a></li>
-            <li><a href="./html/browse.html">Lost and Found</a></li>
+            <li class="hide-desktop">
+              <a href="#" class="menu-close">
+                <img src="./assets/images/close.svg" alt="close menu" />
+              </a>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/browse.html">Lost and Found</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
 
+        <div class="auth-buttons" id="auth-buttons">
+            <a class="del-mobile register-btn" href="./loginandsignup.html"
+              >Register</a
+            >
+          </div>
+
         <!-- Auth buttons - shown when not logged in -->
-        <div class="auth-buttons del-mobile" id="auth-buttons">
-          <a href="./loginandsignup.html" class="register-btn">Register</a>
-        </div>
 
         <!-- Profile section - shown when logged in -->
         <div class="profile-section" id="profile-section" style="display: none">
@@ -147,7 +155,7 @@
             </div>
           </div>
         </div>
-        <div class="overlay"></div>
+        <div class="overlay hide-desktop"></div>
         <div class="hamburger show">
           <span></span>
           <span></span>
@@ -259,9 +267,7 @@
           <!-- Brand Section -->
           <div class="footer-brand">
             <div class="footer-logo">FindIt</div>
-            <p class="footer-description">
-              
-            </p>
+            <p class="footer-description"></p>
             <div class="social-links">
               <a href="#" class="social-link"
                 ><img src="images/facebook.png" alt=""
@@ -348,6 +354,13 @@
         navLinks.classList.toggle("show");
         console.log("clicked");
       });
+
+      const closeBtn = document.querySelector(".menu-close")
+      const overlayClose = document.querySelector(".del-mobile")
+      closeBtn.addEventListener('click', () => {
+        overlayClose.classList.remove("show")
+      })
+
       const firebaseConfig = {
         apiKey: "AIzaSyDyRmoMB05AqOe7wy3SQvjX4AznHgLeD4I",
         authDomain: "lostandfound-8e40a.firebaseapp.com",

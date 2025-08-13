@@ -1,5 +1,5 @@
-@media (min-width: 951px) {
-  .logo {
+
+.logo {
     font-family: var(--main);
     text-decoration: none;
   }
@@ -417,196 +417,18 @@
     transform-origin: -11vw -10vh;
     box-shadow: 40vmin 0 5.290300759848097vmin currentColor;
   }
-}
 
 @media (max-width: 950px) {
-  .logo {
-    font-family: var(--main);
-    text-decoration: none;
-  }
 
-  .logo a {
-    font-family: var(--main);
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 2rem;
-  }
-
-  .logo img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin: 0px;
-  }
-
-  header {
-    padding: 20px 0;
-  }
-
-  .signup-container,
-  .login-container {
-    display: flex;
-    justify-content: center;
-    height: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-    height: 700px;
-  }
-
-  .signup-container.active,
-  .login-container.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .signup-container .image-container {
-    width: 500px;
-    height: 100%;
-    background-color: var(--white);
-    background: url("../assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
-      no-repeat center center/cover;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
-  .signup-container .glass-form {
-    padding: 40px;
-    width: 400px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-
-  .signup-container .glass-form > input,
-  .login-container .glass-form > input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px solid var(--white);
-    font-size: 18px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    margin-top: 10px;
-    background: none;
-    color: var(--white);
-    outline: none;
-  }
-
-  .signup-container .glass-form > input::placeholder,
-  .login-container .glass-form > input::placeholder {
-    color: var(--white);
-    font-family: var(--para);
-    font-size: 15px;
-  }
-
-  .signup-container .glass-form h2,
-  .login-container .glass-form h2 {
-    font-size: 2rem;
-    font-family: var(--para);
-    color: var(--white);
-  }
-
-  .signup-container .glass-form > button,
-  .login-container .glass-form > button {
-    padding: 10px 30px;
-    background-color: #fa9137;
-    color: var(--ash);
-    font-family: var(--para);
-    font-size: 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .signup-container .glass-form > button:nth-of-type(2),
-  .login-container .glass-form > button:nth-of-type(2) {
-    background-color: var(--white);
-    border: 2px solid white;
-  }
-
-  .signup-container .glass-form > .auth-links,
-  .login-container .glass-form > .auth-links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-
-  .signup-container .glass-form > p:nth-of-type(1),
-  .login-container .glass-form > p:nth-of-type(1) {
-    font-size: 15px;
-    color: white;
-    margin: 10px 0;
-  }
-
-  .signup-container .glass-form > p:nth-of-type(2),
-  .login-container .glass-form > p:nth-of-type(2) {
-    font-size: 18px;
-    color: var(--white);
-    margin-top: 20px;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .signup-container .glass-form > p > a,
-  .login-container .glass-form > p > a {
-    color: #fa9137;
-    font-weight: bold;
-  }
-
-  .signup-container .glass-form > .google-btn > img,
-  .login-container .glass-form > .google-btn > img {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    vertical-align: middle;
-  }
-
-  .signup-container .glass-form > label,
-  .login-container .glass-form > label {
-    font-size: 15px;
-    color: var(--white);
-    margin-top: 10px;
-    display: block;
-    font-family: var(--para);
-  }
-
-  /*End of Signup form*/
-
+  .signup-container .image-container,
   .login-container .image-container {
-    width: 500px;
-    height: 100%;
-    background-color: var(--white);
-    background: url("../assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
-      no-repeat center center/cover;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  display: none;
   }
 
+  .signup-container .glass-form,
   .login-container .glass-form {
-    padding: 40px;
-    width: 400px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.125);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
   }
+
 }
