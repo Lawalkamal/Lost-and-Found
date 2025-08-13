@@ -48,7 +48,7 @@
     width: 500px;
     height: 100%;
     background-color: var(--white);
-    background: url("./assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
+    background: url("../assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
       no-repeat center center/cover;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -169,7 +169,7 @@
     width: 500px;
     height: 100%;
     background-color: var(--white);
-    background: url("./assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
+    background: url("../assets/images/dirt-road-middle-forest-sunny-day-with-forest-trees-background.jpg")
       no-repeat center center/cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -432,4 +432,3 @@
   }
 
 }
-
