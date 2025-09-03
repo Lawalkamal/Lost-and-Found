@@ -194,8 +194,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("./assets/images/wave-haikei.svg") no-repeat center
-    center/cover;
+  background: url("./assets/images/wave-haikei.svg") no-repeat center center/cover;
   z-index: -1;
   top: 0;
 }
@@ -925,4 +924,5 @@ Second Section */
 
 
 }
+
 
